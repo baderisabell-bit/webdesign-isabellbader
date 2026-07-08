@@ -348,6 +348,20 @@ body {
         font-size: 1.8rem;
     }
 }
+.image-block {
+    position: relative;
+}
+
+.img-wrapper {
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-profile-img {
+    width: 100%;
+    display: block; /* Entfernt kleine Lücken unter dem Bild */
+    transition: 0.3s;
+}
 
 /* Parallax-Sektion: Das Bild fixieren */
 .parallax-section {
