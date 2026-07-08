@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Webdesign | Isabell Bader</title>
+
+    <link rel="stylesheet" href="kfz_style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1>Webdesign | Isabell Bader</h1>
+  </div>
+
+   <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">   
+         <a href="index.html" data-i18n="header_nav0">&larr; Hauptseite</a>
+         <a href="kfz_index.html" data-i18n="header_nav1">Home</a>
+         <a href="kfz_ueber.html" data-i18n="header_nav2">Über uns</a>
+         <a href="kfz_angebot.html" data-i18n="header_nav3">Unsere Leistungen</a>
+         <a href="kfz_karriere.html" data-i18n="header_nav4">Karriere</a>
+         <a href="kfz_kontakt.html" data-i18n="header_nav5">Kontakt</a>
+        <button id="lang-switch">EN</button>
+    </nav>
+
+</header>
+<main>
+
+<style>
+    header h1 {
+        color: #ffffff !important; /* Schwarze Schrift auf weißem Header */
+    }
+    button.menu-toggle span {
+        background-color: #ffffff !important; /* Schwarze Hamburger-Linien auf weißem Header */
+    }
+    header nav a {
+        color: #ffffff !important; /* Dunkle Schrift auf weißem Header */
+    }
+</style>
+    
+<div class="angebot-parallax">
+    <div class="parallax-overlay"></div>
+    <h1 data-i18n="angebot_titel">Leistungen für Ihr Fahrzeug – KFZ-Werkstatt Bader Essen</h1>
+</div>
+
+<div class="angebot-grid">
+
+<div class="angebot-text">
+    <p data-i18n="angebot_beschreibung">Vom Routinetermin bis zur komplexen Fehlerdiagnose – als markenunabhängiger Meisterbetrieb bieten wir professionellen Service nach Herstellervorgaben. Zuverlässig, transparent und effizient.</p>
+    <h4 id="morespace" data-i18n="angebot_ueberschrift1">Unsere Qualitätsgarantie: Nur Erstausrüsterqualität</h4>
+    <p data-i18n="angebot_beschreibung1">Bei allen Reparaturen verwenden wir ausschließlich Original-Ersatzteile der Fahrzeughersteller oder Identteile von führenden Markenherstellern (wie Bosch, Brembo, Sachs oder Mahle). Das garantiert maximale Passgenauigkeit, Langlebigkeit und die Sicherheit, dass Ihr Fahrzeug exakt den Sicherheitsstandards der Hersteller entspricht.</p>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift2">Wartung & Inspektion nach Herstellervorgabe</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung2">Inspektion mit Garantieerhalt</li>
+        <li data-i18n="angebot_beschreibung2_1">Flüssigkeitsservice (Öl, Kühler, Bremsflüssigkeit)</li>
+        <li data-i18n="angebot_beschreibung2_2">Saison-Checks: Vorbereitung auf Winter oder Urlaubsreise</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift3">Moderne Diagnose & Fahrzeugelektrik</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung3">Fehlerauslese: Gezielte Steuergeräte-Diagnose mit modernsten Testgeräten zur schnellen Lokalisierung von Fehlern</li>
+        <li data-i18n="angebot_beschreibung3_1">Assistenzsysteme: Prüfung und Kalibrierung von sensor- und kamerabasierten Systemen</li>
+        <li data-i18n="angebot_beschreibung3_2">Batteriemanagement: Diagnose, Tiefenprüfung und fachgerechtes Anlernen neuer Fahrzeugbatterien</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift5">Fahrwerk, Bremsen & Mechanik</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung5">Bremsenservice: Kompletter Check und Austausch von Bremsscheiben, Belägen und Leitungen</li>
+        <li data-i18n="angebot_beschreibung5_1">Fahrwerk & Lenkung: Reparatur von Stoßdämpfern, Federn, Querlenkern und Spurstangenköpfen</li>
+        <li data-i18n="angebot_beschreibung5_2">Achsvermessung: Präzise elektronische Vermessung und Einstellung der Fahrwerksgeometrie</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift6">HU/AU (TÜV) & Prüfservice</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung6">Haupt- und Abgasuntersuchung: Regelmäßige Durchführung der HU/AU direkt bei uns im Haus durch amtlich anerkannte Prüforganisationen</li>
+        <li data-i18n="angebot_beschreibung6_1">Vorab-Check: Wir untersuchen Ihr Auto vor dem Prüftermin, um Kritikpunkte zu vermeiden</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift7">Klimaservice & Komfortsysteme</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung7">Klimawartung: Funktions- und Dichtigkeitsprüfung der Klimaanlage, Absaugen und Befüllen des Kältemittels</li>
+        <li data-i18n="angebot_beschreibung7_1">Desinfektion: Professionelle Reinigung des Verdampfers zur Beseitigung von Bakterien, Pilzen und unangenehmen Gerüchen im Innenraum</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+<div class="angebot-item">
+    <h2 data-i18n="angebot_ueberschrift8">Reifen- & Räderservice</h2>
+    <ul>
+        <li data-i18n="angebot_beschreibung8">Reifenwechsel: Fachgerechte Montage und Auswuchten von Sommer-, Winter- und Allwetterreifen</li>
+        <li data-i18n="angebot_beschreibung8_1">Radeinlagerung: Reinigung und sichere, dunkle Lagerung Ihrer Räder für die nächste Saison unter optimalen Bedingungen</li>
+    </ul>
+    <button class="angebot-button" data-i18n="learn_more">Mehr erfahren</button>
+</div>
+
+</div>
+<div class="form-container" id="kontakt-start">
+    <div class="progress-bar">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+    </div>
+
+    <form class="kfz-form" id="multiStepForm">
+        
+        <!-- STEP 1: Anliegen -->
+        <div class="form-step active" id="step1">
+            <h2 data-i18n="anliegen_titel">Ihr Anliegen</h2>
+            <div class="form-group">
+                <label data-i18n="label_art">Was steht an? *</label>
+                <select id="requestType" name="request_type" required>
+                    <option value="" disabled selected data-i18n="select_choose">Bitte wählen...</option>
+                    <option value="inspektion">Inspektion & Wartung</option>
+                    <option value="reparatur">Reparatur</option>
+                    <option value="reifen">Reifenservice</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_beschreibung">Beschreibung *</label>
+                <textarea id="clientMessage" name="message" required placeholder="Symptome..."></textarea>
+            </div>
+        </div>
+
+        <!-- STEP 2: Termin (Platzhalter für später) -->
+        <div class="form-step" id="step2">
+            <h2 data-i18n="termin_titel">Terminwunsch</h2>
+            <p>Wähle hier später deinen Wunschtermin...</p>
+        </div>
+
+<!-- STEP 3: Daten -->
+<div class="form-step" id="step3">
+    <h2 data-i18n="kontakt_titel">Ihre Daten</h2>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label data-i18n="label_vorname">Vorname</label>
+            <input type="text" name="first_name" placeholder="" data-i18n-placeholder="placeholder_vorname" required>
+        </div>
+        <div class="form-group">
+            <label data-i18n="label_nachname">Nachname</label>
+            <input type="text" name="last_name" placeholder="" data-i18n-placeholder="placeholder_nachname" required>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_email">E-Mail-Adresse</label>
+        <input type="email" name="email" placeholder="" data-i18n-placeholder="placeholder_email" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_tel">Telefonnummer</label>
+        <input type="tel" name="phone" placeholder="" data-i18n-placeholder="placeholder_tel" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_kennzeichen">Kennzeichen</label>
+        <input type="text" name="license_plate" placeholder="" data-i18n-placeholder="placeholder_kennzeichen">
+    </div>
+
+    <!-- Honeypot -->
+    <div style="display:none;">
+        <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+    </div>
+</div>
+
+        <div class="form-navigation">
+            <button type="button" id="prevBtn" onclick="changeStep(-1)" disabled>Zurück</button>
+            <button type="button" id="nextBtn" onclick="changeStep(1)">Weiter</button>
+        </div>
+    </form>
+</div>
+</main>
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="kfz_impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="kfz_datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="kfz_agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="kfz_wiederruf.html" data-i18n="link_wiederruf">Wiederrufsbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="kfz_script.js"></script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            let scroll = window.scrollY;
+            document.querySelectorAll('.hero-parallax, .parallax-section').forEach(el => {
+                // Die Zahl 0.5 steuert die Parallax-Geschwindigkeit
+                el.style.backgroundPosition = "center " + (scroll * 0.5) + "px";
+            });
+        });
+    </script>
+</body>
+</html>

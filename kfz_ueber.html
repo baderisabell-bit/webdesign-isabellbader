@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Webdesign | Isabell Bader</title>
+
+    <link rel="stylesheet" href="kfz_style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1>Webdesign | Isabell Bader</h1>
+  </div>
+
+   <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">
+         <a href="index.html" data-i18n="header_nav0">&larr; Hauptseite</a>
+         <a href="kfz_index.html" data-i18n="header_nav1">Home</a>
+         <a href="kfz_ueber.html" data-i18n="header_nav2">Über uns</a>
+         <a href="kfz_angebot.html" data-i18n="header_nav3">Unsere Leistungen</a>
+         <a href="kfz_karriere.html" data-i18n="header_nav4">Karriere</a>
+         <a href="kfz_kontakt.html" data-i18n="header_nav5">Kontakt</a>
+        <button id="lang-switch">EN</button>
+    </nav>
+
+</header>
+<main>
+
+<section id="about-hero" class="hero-parallax"></section>
+
+<section id="about-hero">
+    <div class="about-hero">
+        <h1 data-i18n="about_titel">Traditionelles Handwerk trifft moderne Fahrzeugtechnik</h1>
+    </div>
+</section>
+
+    <div class="about-text">
+        <p data-i18n="about_titel_desc">Ob Inspektion, Reparatur, Hauptuntersuchung oder Diagnose: Wir kümmern uns darum, dass Ihr Fahrzeug sicher und zuverlässig unterwegs ist. Bei uns sind Sie keine Nummer, sondern Kunde mit individuellen Anforderungen.</p>
+    </div>
+
+    <div class="about-history">
+        <h2 data-i18n="about_geschichte_titel">Unsere Geschichte</h2>
+        <p data-i18n="about_geschichte_p1">Gegründet 1964 von KFZ-Meister Heinrich Bader, wird die Werkstatt heute von seinem Sohn Thomas Bader und Enkelin Lisa Bader geführt. Was als kleine Reparaturwerkstatt begann, ist heute ein moderner KFZ-Meisterbetrieb in Essen.</p>
+        <p data-i18n="about_geschichte_p2">Unsere Erfahrung mit klassischen Verbrennungsmotoren ergänzt sich heute mit aktuellem Know-how in elektronischer Fahrzeugdiagnose, Steuergeräte-Analyse und E-Mobilität. So betreuen wir sowohl ältere Fahrzeuge als auch moderne Hybrid- und Elektroautos fachgerecht.</p>
+    </div>
+
+    <div class="about-item">
+        <h2 data-i18n="about_werte_titel">Unsere Werte</h2>
+        <p data-i18n="about_werte_desc">Als KFZ-Werkstatt in Essen stehen wir für Qualität, Transparenz und nachhaltige Reparaturlösungen.</p>
+        <h3 id="morespace" data-i18n="about_werte_1_titel">Transparente Beratung & klare Diagnosen</h3>
+        <p data-i18n="about_werte_1_desc">Wir erklären Ihnen alle Reparaturen verständlich und nachvollziehbar. Mithilfe moderner Diagnosesoftware lesen wir Fehlercodes direkt aus dem Steuergerät aus und besprechen die Ergebnisse transparent mit Ihnen.</p>
+        <h3 id="morespace" data-i18n="about_werte_2_titel">Gründliche Fehlersuche statt schneller Lösungen</h3>
+        <p data-i18n="about_werte_2_desc">Ein Beispiel aus dem Werkstattalltag: Bei Leistungsverlust prüfen wir nicht nur oberflächlich Bauteile, sondern analysieren Sensordaten, Luftmassenmesser und Einspritzsystem im Detail. So vermeiden wir unnötige Teilewechsel und sparen Ihnen Kosten.</p>
+        <h3 id="morespace" data-i18n="about_werte_3_titel">Ausbildung & Verantwortung</h3>
+        <p data-i18n="about_werte_3_desc">Als Ausbildungsbetrieb geben wir unser Wissen an die nächste Generation weiter. Denn gutes Handwerk entsteht durch Erfahrung, Sorgfalt und die Bereitschaft, ständig dazuzulernen.</p>
+    </div>
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="kfz_impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="kfz_datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="kfz_agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="kfz_wiederruf.html" data-i18n="link_wiederruf">Wiederrufsbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="kfz_script.js"></script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            let scroll = window.scrollY;
+            document.querySelectorAll('.hero-parallax, .parallax-section').forEach(el => {
+                // Die Zahl 0.5 steuert die Parallax-Geschwindigkeit
+                el.style.backgroundPosition = "center " + (scroll * 0.5) + "px";
+            });
+        });
+    </script>
+</body>
+</html>

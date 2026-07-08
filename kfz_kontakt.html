@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Webdesign | Isabell Bader</title>
+
+    <link rel="stylesheet" href="kfz_style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1>Webdesign | Isabell Bader</h1>
+  </div>
+
+   <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">
+         <a href="index.html" data-i18n="header_nav0">&larr; Hauptseite</a>
+         <a href="kfz_index.html" data-i18n="header_nav1">Home</a>
+         <a href="kfz_ueber.html" data-i18n="header_nav2">Über uns</a>
+         <a href="kfz_angebot.html" data-i18n="header_nav3">Unsere Leistungen</a>
+         <a href="kfz_karriere.html" data-i18n="header_nav4">Karriere</a>
+         <a href="kfz_kontakt.html" data-i18n="header_nav5">Kontakt</a>
+        <button id="lang-switch">EN</button>
+    </nav>
+
+</header>
+<main>
+
+<style>
+    header h1 {
+        color: #ffffff !important; /* Schwarze Schrift auf weißem Header */
+    }
+    button.menu-toggle span {
+        background-color: #ffffff !important; /* Schwarze Hamburger-Linien auf weißem Header */
+    }
+    header nav a {
+        color: #ffffff !important; /* Dunkle Schrift auf weißem Header */
+    }
+</style>
+
+    <!-- Die Haupt-Sektion oben über alles -->
+    <div class="contact-parallax">
+        <div class="parallax-overlay"></div>
+        <h1 data-i18n="kontakt_main_titel">Kontakt & Terminanfrage</h1>
+    </div>
+
+<div class="contact-grid">
+    <div class="contact-text">
+        <p data-i18n="kontakt_main_text">Sie haben Fragen zu einer Autoreparatur, Inspektion, Reifenwechsel oder TÜV? Melden Sie sich telefonisch, per E-Mail oder nutzen Sie unser Online-Formular für eine schnelle Terminanfrage.</p>
+    </div>
+
+    <!-- Die restlichen Items in einer Reihe darunter -->
+    <div class="contact-item">
+        <h2 data-i18n="oeffnungszeiten_titel">Unsere Öffnungszeiten</h2>
+        <p><strong data-i18n="zeiten_mo_fr">Mo–Fr: 8:00 – 18:00 Uhr</strong></p>
+        <p><strong data-i18n="zeiten_sa">Samstag: 9:00 – 13:00 Uhr</strong></p>
+        <p><strong data-i18n="zeiten_so">Sonntag: Geschlossen</strong></p>
+    </div>
+
+    <div class="contact-item">
+        <h2 data-i18n="telefon_titel">Telefonischer Direktkontakt</h2>
+        <p data-i18n="telefon_text">Für dringende Anfragen, akute Pannen oder kurzfristige Terminabsprachen ist der Anruf der schnellste Weg.</p>
+        <p><strong data-i18n="telefon_label">Telefon:</strong> <a href="tel:01701234567">0170 / 1234567</a></p>
+    </div>
+</div>
+
+<div class="form-container" id="kontakt-start">
+    <div class="progress-bar">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+    </div>
+
+    <form class="kfz-form" id="multiStepForm">
+        
+        <!-- STEP 1: Anliegen -->
+        <div class="form-step active" id="step1">
+            <h2 data-i18n="anliegen_titel">Ihr Anliegen</h2>
+            <div class="form-group">
+                <label data-i18n="label_art">Was steht an? *</label>
+                <select id="requestType" name="request_type" required>
+                    <option value="" disabled selected data-i18n="select_choose">Bitte wählen...</option>
+                    <option value="inspektion">Inspektion & Wartung</option>
+                    <option value="reparatur">Reparatur</option>
+                    <option value="reifen">Reifenservice</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_beschreibung">Beschreibung *</label>
+                <textarea id="clientMessage" name="message" required placeholder="Symptome..."></textarea>
+            </div>
+        </div>
+
+        <!-- STEP 2: Termin (Platzhalter für später) -->
+        <div class="form-step" id="step2">
+            <h2 data-i18n="termin_titel">Terminwunsch</h2>
+            <p>Wähle hier später deinen Wunschtermin...</p>
+        </div>
+
+<!-- STEP 3: Daten -->
+<div class="form-step" id="step3">
+    <h2 data-i18n="kontakt_titel">Ihre Daten</h2>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label data-i18n="label_vorname">Vorname</label>
+            <input type="text" name="first_name" placeholder="" data-i18n-placeholder="placeholder_vorname" required>
+        </div>
+        <div class="form-group">
+            <label data-i18n="label_nachname">Nachname</label>
+            <input type="text" name="last_name" placeholder="" data-i18n-placeholder="placeholder_nachname" required>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_email">E-Mail-Adresse</label>
+        <input type="email" name="email" placeholder="" data-i18n-placeholder="placeholder_email" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_tel">Telefonnummer</label>
+        <input type="tel" name="phone" placeholder="" data-i18n-placeholder="placeholder_tel" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_kennzeichen">Kennzeichen</label>
+        <input type="text" name="license_plate" placeholder="" data-i18n-placeholder="placeholder_kennzeichen">
+    </div>
+
+    <!-- Honeypot -->
+    <div style="display:none;">
+        <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+    </div>
+</div>
+
+        <div class="form-navigation">
+            <button type="button" id="prevBtn" onclick="changeStep(-1)" disabled>Zurück</button>
+            <button type="button" id="nextBtn" onclick="changeStep(1)">Weiter</button>
+        </div>
+    </form>
+</div>
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="kfz_impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="kfz_datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="kfz_agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="kfz_wiederruf.html" data-i18n="link_wiederruf">Wiederrufsbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="kfz_script.js"></script>
+
+</body>
+</html>

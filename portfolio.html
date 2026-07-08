@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webdesign | Isabell Bader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1 data-i18n="title">Webdesign | Isabell Bader</h1>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+  
+    <nav class="main-nav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="about.html"data-i18n="nav_about">Über mich</a>
+        <a href="leistungen.html" data-i18n="nav_services">Leistungen</a>
+        <a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Kontakt</a>
+        <button id="themeToggle" class="theme-btn" data-i18n="theme_toggle">Dunkelmodus</button>
+        <button id="lang-switch" data-i18n="lang_switch">EN</button>
+    </nav>
+</header>
+
+
+<main class="portfolio-container">
+    <header class="portfolio-hero">
+        <h1 data-i18n="portfolio_titel">Ausgewählte Projekte</h1>
+        <p class="lead" data-i18n="portfolio_lead">Hier zeige ich, wie ich individuelle Anforderungen in funktionale, ästhetische Webauftritte übersetze.</p>
+    </header>
+
+    <section class="portfolio-item">
+        <div class="portfolio-image">
+            <img src="images/reitunterricht-screenshot.png" alt="Website Reitunterricht">
+        </div>
+        <div class="portfolio-text">
+            <h2 data-i18n="portfolio_project_1_title">Reitunterricht Bader</h2>
+            <p><strong data-i18n="portfolio_project_1_challenge">Herausforderung:</strong> Eine persönliche, einladende Seite, die Vertrauen aufbaut und den direkten Kontakt erleichtert.</p>
+            <p><strong data-i18n="portfolio_project_1_solution">Lösung:</strong> Ein Design, das Emotion und Struktur vereint. Klare Informationen für Reitschüler und eine einfache Terminverwaltung im Hintergrund.</p>
+            <a href="re_index.html" class="btn-primary" data-i18n="portfolio_project_1_cta">Website ansehen</a>
+        </div>
+    </section>
+
+    <section class="portfolio-item">
+        <div class="portfolio-image">
+            <img src="images/kfz-werkstatt-screenshot.png" alt="Website KFZ-Werkstatt">
+        </div>
+        <div class="portfolio-text">
+            <h2 data-i18n="portfolio_project_2_title">KFZ-Werkstatt Bader</h2>
+            <p><strong data-i18n="portfolio_project_2_challenge">Herausforderung:</strong> Eine technisch saubere, übersichtliche Seite für einen Betrieb, bei dem Zuverlässigkeit und Erreichbarkeit an erster Stelle stehen.</p>
+            <p><strong data-i18n="portfolio_project_2_solution">Lösung:</strong> Fokus auf User Experience – Kunden finden in Sekunden alle Leistungen, Notfall-Kontaktdaten und den Weg zur Werkstatt.</p>
+            <a href="kfz_index.html" class="btn-primary" data-i18n="portfolio_project_2_cta">Website ansehen</a>
+        </div>
+    </section>
+</main>
+
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="wiederruf.html" data-i18n="link_wiederruf">Wiederrufbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

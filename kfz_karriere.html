@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Webdesign | Isabell Bader</title>
+
+    <link rel="stylesheet" href="kfz_style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1>Webdesign | Isabell Bader</h1>
+  </div>
+
+   <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">
+         <a href="index.html" data-i18n="header_nav0">&larr; Hauptseite</a>
+         <a href="kfz_index.html" data-i18n="header_nav1">Home</a>
+         <a href="kfz_ueber.html" data-i18n="header_nav2">Über uns</a>
+         <a href="kfz_angebot.html" data-i18n="header_nav3">Unsere Leistungen</a>
+         <a href="kfz_karriere.html" data-i18n="header_nav4">Karriere</a>
+         <a href="kfz_kontakt.html" data-i18n="header_nav5">Kontakt</a>
+        <button id="lang-switch">EN</button>
+    </nav>
+
+</header>
+<main>
+
+<section id="karriere-hero" class="karriere-parallax">
+    <div class="hero-overlay-content">
+        <h1 data-i18n="karriere_titel">Werde Teil unserer Familie.</h1>
+    </div>
+</section>
+<div class="karriere-text">
+    <p data-i18n="karriere_beschreibung">Du liebst das KFZ-Handwerk, hast aber keine Lust mehr auf Akkordarbeit, schlechte Stimmung und starre Hierarchien? Bei uns im Familienbetrieb zählen deine Leistung, deine Ideen und dein Wohlbefinden.</p>
+</div>
+
+<div class="karriere-benefits">
+    <h3 data-i18n="karriere_fehlerkultur">Fehlerkultur statt Schuldzuweisungen</h3>
+    <p data-i18n="fehlerkultur_beschreibung">Moderne Fahrzeuge sind komplex. Wenn etwas schiefgeht, stehen wir als Team hinter dir. Wir suchen gemeinsam nach der Lösung, nicht nach dem Sündenbock. Bei uns lernst du mit jeder Herausforderung dazu.</p>
+    <h3 id="morespace" data-i18n="fehlerkultur_beschreibung2">Echte Wertschätzung & Mitgestaltung</h3>
+    <p data-i18n="fehlerkultur_beschreibung3">Familienbetrieb bedeutet für uns: Wir kennen deine Stärken und nehmen Rücksicht auf dein Privatleben. Bei uns gibt es pünktlichen Feierabend, faire, leistungsgerechte Vergütung und Überstunden, die aufgeschrieben und zeitnah ausgeglichen werden.</p>
+    <h3 id="morespace" data-i18n="fehlerkultur_beschreibung4">Deine Entwicklung im Fokus</h3>
+    <p data-i18n="fehlerkultur_beschreibung5">Das KFZ-Handwerk verändert sich rasanter. Egal ob Hochvolt-Schein (E-Mobilität), Diagnose-Spezialisierung oder der Weg zum Meister – wir unterstützen dich bei Fortbildungen und übernehmen die Kosten. Wenn du wachsen willst, halten wir dir den Rücken frei.</p>
+</div>
+
+<div class="karriere">
+    <h1 data-i18n="offene_stellen">Offene Stellen</h1>
+</div>
+<div class="karriere">
+    <a data-i18n="stellen_titel" class="btnoffene_stellen">Ausbildung zum KFZ-Mechatroniker (m/w/d) in Vollzeit</a>
+</div>
+
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="kfz_impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="kfz_datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="kfz_agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="kfz_wiederruf.html" data-i18n="link_wiederruf">Wiederrufsbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="kfz_script.js"></script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            let scroll = window.scrollY;
+            document.querySelectorAll('.hero-parallax, .parallax-section').forEach(el => {
+                // Die Zahl 0.5 steuert die Parallax-Geschwindigkeit
+                el.style.backgroundPosition = "center " + (scroll * 0.5) + "px";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Webdesign | Isabell Bader</title>
+    <link rel="stylesheet" href="kfz_style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1>Webdesign | Isabell Bader</h1>
+  </div>
+
+   <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="main-nav">
+        <a href="index.html" data-i18n="header_nav0">← Hauptseite</a>
+        <a href="kfz_index.html" data-i18n="header_nav1">Home</a>
+        <a href="kfz_ueber.html" data-i18n="header_nav2">Über uns</a>
+        <a href="kfz_angebot.html" data-i18n="header_nav3">Unsere Leistungen</a>
+        <a href="kfz_karriere.html" data-i18n="header_nav4">Karriere</a>
+        <a href="kfz_kontakt.html" data-i18n="header_nav5">Kontakt</a>
+        <button id="lang-switch">EN</button>
+    </nav>
+</header>
+<main>
+
+<section id="home-hero" class="hero-parallax"></section>
+
+<section id="home-text">
+    <div class="hero">
+        <h1 data-i18n="titel">KFZ-Werkstatt Bader</h1>
+        <p data-i18n="titel_beschreibung">Seit 1964 für zuverlässige Autoreparatur, Inspektion, TÜV und E-Mobilität. Als Familienbetrieb in dritter Generation verbinden wir klassisches Handwerk mit moderner Diagnosetechnik.</p>
+        <a href="kfz_kontakt.html" class="btn-hero" data-i18n="termin_anfragen">Termin anfragen</a>
+    </div>
+</section>
+
+<section class="parallax-section">
+    <div class="parallax-overlay"></div>
+    <div class="highlight-item">
+        <h3 data-i18n="index_ueberschrift1">Unabhängiger Meisterbetrieb seit 1964</h3>
+    </div>
+</section>
+
+
+<div class="services-preview">
+    <h2 data-i18n="index_ueberschrift5">Unsere Leistungen</h2>
+    <p data-i18n="beschreibung_index_ueberschrift5">Vom Routinetermin bis zur komplexen Fehlerdiagnose – wir bieten professionellen Service für alle Fahrzeugtypen.</p>
+    <a href="kfz_angebot.html" class="btn-career" data-i18n="karriere_ansehen">Mehr erfahren</a>
+</div>
+
+<!-- Career Preview -->
+<div class="career-preview">
+    <h2 data-i18n="index_ueberschrift6">Karriere & Ausbildung</h2>
+    <p data-i18n="beschreibung_index_ueberschrift6">Wir bilden aus und suchen Verstärkung für unser Team. Erfahren Sie mehr über offene Stellen und Ausbildungsmöglichkeiten.</p>
+    <a href="kfz_karriere.html" class="btn-career" data-i18n="karriere_ansehen">Ausbildung ansehen</a>
+</div>
+
+<div class="form-container" id="kontakt-start">
+    <div class="progress-bar">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+    </div>
+
+    <form class="kfz-form" id="multiStepForm">
+        
+        <!-- STEP 1: Anliegen -->
+        <div class="form-step active" id="step1">
+            <h2 data-i18n="anliegen_titel">Ihr Anliegen</h2>
+            <div class="form-group">
+                <label data-i18n="label_art">Was steht an? *</label>
+                <select id="requestType" name="request_type" required>
+                    <option value="" disabled selected data-i18n="select_choose">Bitte wählen...</option>
+                    <option value="inspektion" data-i18n="option_inspektion">Inspektion & Wartung</option>
+                    <option value="reparatur" data-i18n="option_reparatur">Reparatur</option>
+                    <option value="reifen" data-i18n="option_reifen">Reifenservice</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_beschreibung">Beschreibung *</label>
+                <textarea id="clientMessage" name="message" required placeholder="Symptome..."></textarea>
+            </div>
+        </div>
+
+        <!-- STEP 2: Termin (Platzhalter für später) -->
+        <div class="form-step" id="step2">
+            <h2 data-i18n="termin_titel">Terminwunsch</h2>
+            <p data-i18n="termin_beschreibung">Wähle hier später deinen Wunschtermin...</p>
+        </div>
+
+<!-- STEP 3: Daten -->
+<div class="form-step" id="step3">
+    <h2 data-i18n="kontakt_titel">Ihre Daten</h2>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label data-i18n="label_vorname">Vorname</label>
+            <input type="text" name="first_name" placeholder="" data-i18n-placeholder="placeholder_vorname" required>
+        </div>
+        <div class="form-group">
+            <label data-i18n="label_nachname">Nachname</label>
+            <input type="text" name="last_name" placeholder="" data-i18n-placeholder="placeholder_nachname" required>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_email">E-Mail-Adresse</label>
+        <input type="email" name="email" placeholder="" data-i18n-placeholder="placeholder_email" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_tel">Telefonnummer</label>
+        <input type="tel" name="phone" placeholder="" data-i18n-placeholder="placeholder_tel" required>
+    </div>
+    
+    <div class="form-group">
+        <label data-i18n="label_kennzeichen">Kennzeichen</label>
+        <input type="text" name="license_plate" placeholder="" data-i18n-placeholder="placeholder_kennzeichen">
+    </div>
+
+    <!-- Honeypot -->
+    <div style="display:none;">
+        <input type="text" name="website_hp" tabindex="-1" autocomplete="off">
+    </div>
+</div>
+
+        <div class="form-navigation">
+            <button data-i18n="btn_zurück" type="button" id="prevBtn" onclick="changeStep(-1)" disabled>Zurück</button>
+            <button data-i18n="btn_absenden" type="button" id="nextBtn" onclick="changeStep(1)">Weiter</button>
+        </div>
+    </form>
+</div>
+</main> 
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="kfz_impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="kfz_datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="kfz_agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="kfz_wiederruf.html" data-i18n="link_wiederruf">Wiederrufsbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="kfz_script.js"></script>
+
+<script>
+        window.addEventListener('scroll', function() {
+            let scroll = window.scrollY;
+            document.querySelectorAll('.hero-parallax, .parallax-section').forEach(el => {
+                // Die Zahl 0.5 steuert die Parallax-Geschwindigkeit
+                el.style.backgroundPosition = "center " + (scroll * 0.5) + "px";
+            });
+        });
+    </script>
+</body>
+</html>

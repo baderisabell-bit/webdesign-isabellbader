@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webdesign | Isabell Bader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-title">
+    <h1 data-i18n="title">Webdesign | Isabell Bader</h1>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+  
+    <nav class="main-nav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="about.html"data-i18n="nav_about">Über mich</a>
+        <a href="leistungen.html" data-i18n="nav_services">Leistungen</a>
+        <a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav_contact">Kontakt</a>
+        <button id="themeToggle" class="theme-btn" data-i18n="theme_toggle">Dunkelmodus</button>
+        <button id="lang-switch" data-i18n="lang_switch">EN</button>
+    </nav>
+</header>
+
+<main class="contact-page">
+    <section class="contact-hero">
+        <h1 data-i18n="contact_hero_h1">Lass uns dein Projekt starten</h1>
+        <p class="lead" data-i18n="contact_hero_lead">Schreib mir eine Nachricht oder buche direkt ein unverbindliches Kennenlernen.</p>
+    </section>
+
+    <div class="contact-grid">
+        <aside class="contact-info">
+            <h2 data-i18n="contact_info_h2">Direkter Kontakt</h2>
+            <p data-i18n="contact_info_p">Du hast Fragen oder möchtest erst einmal E-Mail-Kontakt? Schreib mir einfach eine Nachricht.</p>
+            <div class="contact-method">
+                <h4 data-i18n="contact_info_email">E-Mail:</h4>
+                <a href="mailto:baderisabell@gmail.com">baderisabell@gmail.com</a>
+                <h4 data-i18n="contact_info_telefon">Telefonnummer:</h4>
+                <a href="tel:+4915117903181">+49 15117903181</a>
+            </div>
+            <p class="contact-hours" data-i18n="contact_info_hours">Ich antworte werktags in der Regel innerhalb von 24 Stunden.</p>
+        </aside>
+
+        <section class="contact-form-area">
+            <h2 data-i18n="contact_form_h2">Termin oder Anfrage</h2>
+
+            <form action="https://formspree.io/f/mpqwwgkd" method="POST" class="contact-form">
+                <label for="name" data-i18n="contact_form_name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-i18n="contact_form_email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefon" data-i18n="contact_form_telefon">Telefonnummer (optional)</label>
+                <input type="tel" id="telefon" name="telefon">
+
+                <label for="topic" data-i18n="contact_form_topic">Anliegen</label>
+                <select id="topic" name="topic">
+                    <option value="anfrage" data-i18n="contact_form_topic_anfrage">Allgemeine Anfrage / Rückrufbitte</option>
+                    <option value="termin" data-i18n="contact_form_topic_termin">Termin für Erstgespräch buchen</option>
+                </select>
+
+                <label for="message" data-i18n="contact_form_message">Nachricht</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <div style="display: none;">
+                    <label>Bitte leer lassen</label>
+                    <input type="text" name="_gotcha">
+                </div>
+
+                <button type="submit" class="btn-primary" data-i18n="contact_form_submit">Absenden</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+        <div class="footer-col">
+            <h4 data-i18n="footer_links">Informationen</h4>
+            <a href="impressum.html" data-i18n="link_impressum">Impressum</a><br>
+            <a href="datenschutz.html" data-i18n="link_datenschutz">Datenschutz</a>
+            <a href="agb.html" data-i18n="link_agb">Allgemeine Geschäftsbedingungen</a>
+            <a href="wiederruf.html" data-i18n="link_wiederruf">Wiederrufbelehrung</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 KFZ-Werkstatt Bader. <span data-i18n="footer_copyright">Alle Rechte vorbehalten.</span></p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
