@@ -166,6 +166,7 @@ body {
 .text-side p {
     font-size: 1.25rem;    /* Normaler Text etwas größer (z. B. 1.2rem - 1.4rem) */
     line-height: 1.6;
+    color: #a86624;
 }
 
 .btn-primary {
