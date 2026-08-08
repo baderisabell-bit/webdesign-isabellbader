@@ -2,12 +2,12 @@
    1. VARIABLEN & BASIS (Hell- / Dunkelmodus)
    ========================================================= */
 :root {
-    --bg-color: #f8f3f3;
-    --panel-color: #f4d6b7;
+    --bg-color: #faf8f8;
+    --panel-color: #f4dbc2;
     --text-color: #0f0f0f;
     --text-color-p: #555;
-    --header-text: #ffffff;
-    --titel-color: #f8f5f5;
+    --header-text: #040404;
+    --titel-color: #060606;
     --footer-bg: #222;
     --btn-color: #f4d6b7;
 }
@@ -51,7 +51,7 @@ body {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('images/hintergrund.JPG');
+    background-image: url('images/hintergrund2.JPG');
     background-size: cover;
     background-position: center;
     filter: blur(5px);
@@ -147,25 +147,14 @@ body {
     z-index: 0;
 }
 
-.hero-layout::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(246, 240, 240, 0.132); /* Dein weißes Overlay */
-    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%); /* Exakt dieselbe Schräge */
-    z-index: 2; /* Über dem Bild (z-index: 1) */
-    pointer-events: none;
-}
+
 
 .text-side {
     position: relative;
     z-index: 2;
     padding: 15%;
     width: 40%;
-    color: var(--titel-color);
+    color: var(--c);
 }
 
 .text-side h1 {
@@ -603,7 +592,7 @@ body {
 .portfolio-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Moderner Schatten */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Moderner Schatten */
 }
 
 .portfolio-text h2 {
