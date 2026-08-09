@@ -61,7 +61,7 @@ a:visited {
     background-size: cover;
     background-position: center;
     filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(247, 245, 245, 0.334); 
     background-blend-mode: overlay;    
     z-index: -1;
     transform: scale(1.1);
@@ -126,7 +126,6 @@ a:visited {
     width: 100%; 
     height: 100%;
     object-fit: cover;
-    filter: grayscale(0%) brightness(0.8);
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); 
     z-index: 1;
 }
@@ -178,7 +177,7 @@ a:visited {
 .btn-primary {
     display: inline-block;
     padding: 15px 30px;
-    background: #555;
+    background: #F4DBC2;
     color: #fff;
     text-decoration: none;
     margin-top: 20px;
@@ -186,7 +185,7 @@ a:visited {
 
 .btn-primary:hover {
     background: var(--btn-color);
-    color: #000000;
+    color: #6e6d6d;
 }
 
 .btn-text {
@@ -278,7 +277,7 @@ a:visited {
 .footer-col h4 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--header-text);
+    color: var(--panel-color);
 }
 
 .footer-col p {
@@ -309,6 +308,21 @@ a:visited {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    .site-footer {
+        flex-direction: column;    /* Zwingt alle Spalten untereinander */
+        align-items: center;       /* Zentriert die Spalten (oder 'flex-start' für linksbündig) */
+        text-align: center;        /* Richtet Text mittig aus (optional) */
+        gap: 30px;                 /* Fester Abstand statt Prozentwerten */
+        padding: 40px 20px;
+    }
+
+    .footer-col {
+        width: 100%;               /* Nutzt die volle Breite */
+        align-items: center;       /* Passt die Links/Inhalte der Zentrierung an */
+    }
+}
+
 /* =========================================================
    MOBILE ANPASSUNGEN
    ========================================================= */
@@ -324,7 +338,7 @@ a:visited {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.167);
+        background: rgb(244, 219, 194);
         padding: 40px 0;
         text-align: center;
     }
@@ -696,6 +710,10 @@ a:visited {
         width: 100%;
         box-sizing: border-box;
         margin-left: 0 !important;
+    }
+    .contact-hero {
+        text-align: center;
+        margin-bottom: 40px;
     }
 }
 
