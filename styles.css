@@ -13,14 +13,14 @@
 }
 
 body.light-mode {
-    --bg-color: #0f0f0f;
-    --panel-color: #e2d6c9;
-    --text-color: #e0e0e0;
-    --text-color-p: #888;
-    --header-text: #ffffff;
-    --titel-color: #111010;
+    --bg-color: #faf8f8;
+    --panel-color: #f4dbc2;
+    --text-color: #0f0f0f;
+    --text-color-p: #555;
+    --header-text: #040404;
+    --titel-color: #060606;
     --footer-bg: #222;
-    --btn-color: #f8f3f3;
+    --btn-color: #f4d6b7;
 }
 
 body {
@@ -30,8 +30,14 @@ body {
     overflow-x: hidden; 
     background-color: var(--bg-color);
     color: var(--text-color);
+    color-scheme: light;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
+}
+
+a,
+a:visited {
+    color: inherit;
 }
 
 /* =========================================================
