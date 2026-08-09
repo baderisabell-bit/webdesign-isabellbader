@@ -177,7 +177,7 @@ a:visited {
 .btn-primary {
     display: inline-block;
     padding: 15px 30px;
-    background: #F4DBC2;
+    background: #6e6d6d;
     color: #fff;
     text-decoration: none;
     margin-top: 20px;
@@ -185,7 +185,7 @@ a:visited {
 
 .btn-primary:hover {
     background: var(--btn-color);
-    color: #6e6d6d;
+    color: #F4DBC2;
 }
 
 .btn-text {
