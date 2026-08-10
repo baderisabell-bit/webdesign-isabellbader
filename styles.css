@@ -163,19 +163,7 @@ html, body {
     z-index: 2;
     padding: 15%;
     width: 40%;
-    color: var(--text-color);
-}
-
-/* Fallback: hero background as CSS background to avoid cases where <img> may not render */
-.hero-layout::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('images/hintergrund3.JPG');
-    background-size: cover;
-    background-position: center;
-    z-index: 1; /* unter Text (text-side z-index:2) */
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    color: var(--c);
 }
 
 .text-side h1 {
