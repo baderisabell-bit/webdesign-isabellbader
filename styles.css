@@ -13,14 +13,14 @@
 }
 
 body.light-mode {
-    --bg-color: #0f0f0f;
-    --panel-color: #e2d6c9;
-    --text-color: #e0e0e0;
-    --text-color-p: #888;
-    --header-text: #ffffff;
-    --titel-color: #111010;
+    --bg-color: #faf8f8;
+    --panel-color: #f4dbc2;
+    --text-color: #0f0f0f;
+    --text-color-p: #555;
+    --header-text: #040404;
+    --titel-color: #060606;
     --footer-bg: #222;
-    --btn-color: #f8f3f3;
+    --btn-color: #f4d6b7;
 }
 
 body {
@@ -30,8 +30,18 @@ body {
     overflow-x: hidden; 
     background-color: var(--bg-color);
     color: var(--text-color);
+    color-scheme: light;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
+}
+
+a,
+a:visited {
+    color: inherit;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -101,146 +111,197 @@ body {
 /* =========================================================
    3. HERO-LAYOUT (Schräge & Hintergrund)
    ========================================================= */
+
+/* Basis-Reset für Elemente im Hero */
+#hero, #hero * {
+  box-sizing: border-box;
+}
+
 .hero-layout {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-    background-color: var(--bg-color);
-    display: flex; /* Flexbox aktivieren */
-    align-items: center; /* Vertikal zentrieren */
-    justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 90vh;
+  min-height: 500px; /* Verhindert Quetschen auf kleinen Handys */
+  overflow: hidden;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* Das Bild: Hier ist die scharfe Schräge */
+/* Das Bild: Schräge */
 .hero-bg-img {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); 
-    z-index: 1;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); 
+  z-index: 1;
 }
 
+/* Schatten-Effekt */
 .hero-shadow-caster {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 101%; /* Leicht größer, damit der Schatten rechts rauskommt */
-    height: 100%;
-    background-color: transparent;
-    box-shadow: 15px 0px 30px rgba(0,0,0,1.3); /* Ein harter Schatten nach rechts */
-    z-index: 1; /* Zwischen Bild und Panel */
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; /* Auf 100% korrigiert, um Scrollen zu verhindern */
+  height: 100%;
+  background-color: transparent;
+  box-shadow: 15px 0px 30px rgba(0,0,0,1.3);
+  z-index: 1;
 }
 
-/* Panel: Liegt dahinter */
+/* Panel dahinter */
 .dark-mode-panel {
-    position: absolute;
-    right: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%;
-    background-color: var(--panel-color);
-    z-index: 0;
+  position: absolute;
+  right: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%;
+  background-color: var(--panel-color);
+  z-index: 0;
 }
 
-
-
+/* Text-Container (Desktop) */
 .text-side {
-    position: relative;
-    z-index: 2;
-    padding: 15%;
-    width: 40%;
-    color: var(--c);
+  position: relative;
+  z-index: 2;
+  padding: 0 5% 0 10%;
+  width: 50%;
+  color: var(--c);
 }
 
 .text-side h1 {
-    font-size: 3rem;       /* Grundgröße (z. B. 2.5rem bis 3.5rem ausprobieren) */
-    line-height: 1.2;      /* Zeilenabstand bei großer Schrift anpassen */
-    margin-bottom: 20px;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .text-side p {
-    font-size: 1.25rem;    /* Normaler Text etwas größer (z. B. 1.2rem - 1.4rem) */
-    line-height: 1.6;
-    color: #a86624;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #a86624;
 }
 
 .btn-primary {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #9b8572;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 20px;
+  display: inline-block;
+  padding: 15px 30px;
+  background: #9b8572;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
 .btn-primary:hover {
-    background: #F4DBC2;
-    color: #0f0f0f;
+  background: #F4DBC2;
+  color: #0f0f0f;
 }
 
 .btn-text {
-    display: inline-block;
-    padding: 15px 30px;
-    background: transparent;
-    border: 2px solid var(--text-color);
-    color: var(--text-color) !important;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: all 0.3s ease;
+  display: inline-block;
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color) !important;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
 }
 
 .btn-text:hover {
-    background: var(--btn-color);
-    color: var(--text-color) !important;
+  background: var(--btn-color);
+  color: var(--text-color) !important;
 }
 
-/* Container und Hero */
+/* Container und Hero Grid */
 .home-container { max-width: 900px; margin: 100px auto; padding: 0 5%; }
 .home-hero { text-align: center; margin-bottom: 120px; }
 .home-hero h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 20px; }
 .lead { font-size: 1.5rem; color: var(--text-color); margin-bottom: 40px; }
 
-/* Das Grid ohne Rahmen oder Hintergründe */
 .preview-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
 }
 
 .preview-item {
-    display: flex;        
-    flex-direction: column;
+  display: flex;        
+  flex-direction: column;
 }
 
 .preview-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--text-color); /* Starke, minimalistische Linie */
-    padding-bottom: 10px;
-    display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .preview-item p {
-   color: var(--text-color-p);
-   margin-bottom: 20px;
-   flex-grow: 1;
+  color: var(--text-color-p);
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
+
 .preview-item a { color: var(--text-color-p); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 
 .preview-item .btn-text {
-    align-self: flex-start; 
-    margin-top: auto;
+  align-self: flex-start; 
+  margin-top: auto;
 }
 
-/* Responsive */
+/* =========================================================
+   RESPONSIVE (Mobil-Anpassungen)
+   ========================================================= */
 @media (max-width: 768px) {
-    .preview-grid { grid-template-columns: 1fr; gap: 40px; }
-    .home-hero h1 { font-size: 2.5rem; }
+    .hero-bg-img {
+    max-width: 100%;
+  }
+  
+    .hero-layout::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.133); /* 0.4 = 40% Deckkraft (anpassbar) */
+    z-index: 1; /* Liegt über dem Bild, aber unter dem Text */
+    pointer-events: none;
+  }
+
+  .hero-layout {
+    justify-content: center; /* Zentriert die Text-Box horizontal */
+    height: auto;
+    padding: 1px 0;
+    min-height: auto;
+    overflow-x: hidden;
+  }
+
+  .text-side {
+    width: 100%;      
+    max-width: 100%;    
+    padding: 10px 20px;   
+    text-align: center;  
+  }
+
+  .text-side h1 {
+    font-size: 2.4rem;       /* Skaliert Überschrift für Handys runter */
+  }
+
+  .preview-grid { 
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+  }
+  
+  .home-hero h1 { 
+    font-size: 2.5rem; 
+  }
 }
 
 /* =========================================================
@@ -254,17 +315,21 @@ body {
     z-index: 2;
 
     display: flex;
-    justify-content: center; /* Verteilt die Spalten gleichmäßig */
-    align-items: flex-start;      /* Richtet sie oben bündig aus */
-    flex-wrap: wrap;              /* Erlaubt Umbruch auf Mobilgeräten */
-    gap: 15%;                    /* Abstand zwischen den Spalten */
+    justify-content: center; 
+    align-items: flex-start;      
+    flex-wrap: wrap;              
+    gap: 15%;                    /* Zurück zum Original für Desktop */
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* 2. Spalten-Inhalte (Inhalte UNTEREINANDER) */
+/* 2. Spalten-Inhalte */
 .footer-col {
     display: flex;
-    flex-direction: column;       /* Stapelt Überschriften, Paragraphen & Links */
-    align-items: flex-start;      /* Linksbuendig ausgerichtet (oder 'center' für mittig) */
+    flex-direction: column;       
+    align-items: flex-start;      
+    box-sizing: border-box;
 }
 
 /* 3. Abstände und Links aufräumen */
@@ -275,18 +340,23 @@ body {
 }
 
 .footer-col p {
-    margin: 3px 0;                /* Kompakterer Zeilenabstand */
+    margin: 3px 0;                
 }
 
 .site-footer a {
     color: var(--panel-color);
     text-decoration: none;
-    margin-bottom: 4px;           /* Ersetzt die unnötigen <br> Tags */
+    margin-bottom: 4px;           
     transition: color 0.2s ease;
+
+    /* Verhindert das Ausbrechen langer Wörter auf Mobilgeräten */
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .site-footer a:hover {
-    color: var(--header-text);    /* Interaktiver Hover-Effekt */
+    color: var(--header-text);    
 }
 
 .footer-bottom {
@@ -294,26 +364,38 @@ body {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Dezente Trennlinie nach oben */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
     font-size: 0.85rem;
+    box-sizing: border-box;
 }
 
 .footer-bottom p {
     margin: 0;
 }
 
+.footer-col p, 
+.footer-col a {
+    max-width: 100%;
+    overflow-wrap: anywhere; /* Bricht extrem lange Wörter/E-Mails ab */
+    word-break: break-word;
+}
+
+/* RESPONSIVE (Betrifft NUR mobile Bildschirme) */
 @media (max-width: 768px) {
     .site-footer {
-        flex-direction: column;    /* Zwingt alle Spalten untereinander */
-        align-items: center;       /* Zentriert die Spalten (oder 'flex-start' für linksbündig) */
-        text-align: center;        /* Richtet Text mittig aus (optional) */
-        gap: 30px;                 /* Fester Abstand statt Prozentwerten */
+        flex-direction: column;    
+        align-items: center;       
+        text-align: center;        
+        gap: 30px;                 /* Ersetzt das 15%-Gap NUR auf Mobilgeräten */
         padding: 40px 20px;
     }
 
     .footer-col {
-        width: 100%;               /* Nutzt die volle Breite */
-        align-items: center;       /* Passt die Links/Inhalte der Zentrierung an */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;     
     }
 }
 
