@@ -309,6 +309,7 @@ p {
 .preview-item p {
     flex-grow: 1;
     margin-bottom: 24px;
+    color:#FFFFFF
 }
 
 /* Full-Width Hero Bild direkt unter dem Header */
