@@ -4,7 +4,6 @@
    1. DESIGN SYSTEM & VARIABLEN (Light & Dark Mode)
    ========================================================= */
 :root {
-    /* HELLES THEME (Standard) */
     --bg-main: #dff6ea2c;          
     --bg-surface: #FFFFFF;       
     --bg-subtle: #F0F3F1;  
@@ -33,7 +32,6 @@
     --fs-body: 1rem;
     --fs-small: 0.875rem;
 
-    /* Leicht abgerundete Ecken - Handwerklich & Subtil */
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
@@ -42,7 +40,6 @@
     --shadow-hover: 0 10px 30px rgba(13, 31, 24, 0.08);
 }
 
-/* DUNKELMODUS (Klasse .dark-mode oder data-theme="dark") */
 body.dark-mode,
 [data-theme="dark"] {
     --bg-main: #0A110E;          
@@ -67,7 +64,6 @@ body.dark-mode,
     --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-
 
 /* Reset & Basis */
 *, *::before, *::after {

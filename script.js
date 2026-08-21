@@ -1,7 +1,20 @@
-document.getElementById('themeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    const btn = document.getElementById('themeToggle');
-    btn.textContent = document.body.classList.contains('light-mode') ? 'Hellmodus' : 'Dunkelmodus';
+document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('themeToggle');
+
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = 'Heller Modus';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = 'Dunkelmodus';
+            }
+        });
+    }
 });
 
 
