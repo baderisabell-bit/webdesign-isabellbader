@@ -30,17 +30,16 @@
     </nav>
 </header>
 <main>
-<section id="hero" class="hero-layout">
-    <img src="images/hintergrund2.JPG" alt="abstraktes Hintergrundbild" class="hero-bg-img">
-    <div class="hero-shadow-caster"></div>
-    <div class="dark-mode-panel"></div>
-    <div class="text-side">
+
+<section class="hero-image-section">
+  <div class="hero-image-content">
         <p class="hero-subtitle" data-i18n="hero_subtitle">INDIVIDUELL. MODERN. ZUVERLÄSSIG.</p>
         <h1 data-i18n="hero_h1">Digitale Lösungen individuell entwickelt.</h1>
         <p data-i18n="hero_p">Ich begleite dich von der Idee bis zur fertigen Lösung, mit sauberem Code, modernem Design und einer benutzerfreundlichen Oberfläche.</p>
         <a href="leistungen.html" class="btn-primary" data-i18n="btn_services">Leistungen ansehen</a>
     </div>
 </section>
+
 <section class="home-container">
     <div class="home-hero">
         <h1 data-i18n="home_h1">Digitale Präsenz für DEINE Leidenschaft</h1>
@@ -51,13 +50,13 @@
     <section class="preview-grid">
         <article class="preview-item">
             <h3 data-i18n="preview_about">Mehr als Webdesign</h3>
-            <p data-i18n="preview_about_desc">Meine Wurzeln im Handwerk machen den Unterschied.</p>
+            <p data-i18n="preview_about_desc">Meine Weg in die digitale Welt führt zu individuellen Lösungen.</p>
             <a href="about.html" class="btn-text" data-i18n="btn_more_info">Mehr erfahren</a>
         </article>
 
         <article class="preview-item">
             <h3 data-i18n="preview_services">Leistungen</h3>
-            <p data-i18n="preview_services_desc">Professionelles Webdesign, das deinen Betrieb in der Region sichtbar macht.</p>
+            <p data-i18n="preview_services_desc">Professionelles Webdesign, individuellen Webshop oder Webportal, die deinen Betrieb sichtbar machen.</p>
             <a href="angebot.html" class="btn-text" data-i18n="btn_view_services">Leistungen ansehen</a>
         </article>
 
@@ -68,6 +67,31 @@
         </article>
     </section>
 </section>
+
+<section class="contact-form-area">
+            <h2 data-i18n="contact_form_h2">Kontakt</h2>
+
+            <form action="https://formspree.io/f/mrewvyyv" method="POST" class="contact-form">
+                <label for="name" data-i18n="contact_form_name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-i18n="contact_form_email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefon" data-i18n="contact_form_telefon">Telefonnummer (optional)</label>
+                <input type="tel" id="telefon" name="telefon">
+
+                <label for="message" data-i18n="contact_form_message">Nachricht</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <div style="display: none;">
+                    <label>Bitte leer lassen</label>
+                    <input type="text" name="_gotcha">
+                </div>
+
+                <button type="submit" class="btn-primary" data-i18n="contact_form_submit">Absenden</button>
+            </form>
+        </section>
 </main>
 <footer class="site-footer">
         <div class="footer-col">
