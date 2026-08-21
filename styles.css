@@ -68,28 +68,6 @@ body.dark-mode,
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* System-Dunkelmodus Fallback */
-/* System-Dunkelmodus Fallback */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]):not(.light-mode) {
-        --bg-main: #0A110E;
-        --bg-surface: #111C18;
-        --bg-subtle: #16241F;
-        --velvet-green-deep: #173328;
-        --velvet-green-main: #2A5443;
-        --velvet-green-hover: #366A55;
-        --velvet-green-light: #1A2F26;
-        --border-color: #23362E;
-        --border-dark: #2A5443;
-        --text-primary: #F0F4F2;
-        --text-secondary: #B0C0B7;
-        --text-muted: #7E9187;
-        --input-bg: #16241F;
-        --input-border: #2B3F36;
-        --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.3);
-        --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-}
 
 /* Reset & Basis */
 *, *::before, *::after {
