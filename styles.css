@@ -268,7 +268,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 700;
-    color: var(--velvet-green-main);
+    color: var(--bg-surface);
     margin-bottom: 1rem;
 }
 
@@ -309,7 +309,6 @@ p {
 .preview-item p {
     flex-grow: 1;
     margin-bottom: 24px;
-    color:#FFFFFF
 }
 
 /* Full-Width Hero Bild direkt unter dem Header */
@@ -351,7 +350,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 700;
-    color: #A3B8AD;
+    color: #d4f4e4;
     margin-bottom: 0.75rem;
 }
 
