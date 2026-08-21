@@ -1,30 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
 
+    const applyTheme = (theme) => {
+        const isDark = theme === 'dark';
+        document.body.classList.toggle('dark-mode', isDark);
+        document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+        if (themeBtn) {
+            themeBtn.textContent = isDark ? 'Heller Modus' : 'Dunkelmodus';
+            themeBtn.setAttribute('aria-pressed', String(isDark));
+        }
+    };
+
+    if (savedTheme === 'dark') {
+        applyTheme('dark');
+    } else {
+        applyTheme('light');
+    }
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                themeBtn.textContent = 'Heller Modus';
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeBtn.textContent = 'Dunkelmodus';
-            }
+            const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', nextTheme);
+            applyTheme(nextTheme);
         });
     }
 });
 
-
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
-menuToggle.addEventListener('click', () => {
-    // Menü ein-/ausblenden
-    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-});
+if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+        nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    });
+}
 
 // Sprache
 // --- Ganz oben ---

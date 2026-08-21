@@ -54,9 +54,9 @@ body.dark-mode,
     --border-color: #23362E;
     --border-dark: #2A5443;
 
-    --text-primary: #F0F4F2;     
-    --text-secondary: #B0C0B7;
-    --text-muted: #7E9187;
+    --text-primary: #080808;     
+    --text-secondary: #000000;
+    --text-muted: #214738;
 
     --input-bg: #16241F;
     --input-border: #2B3F36;
